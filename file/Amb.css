@@ -1,0 +1,47 @@
+@keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .card:hover {
+    transform: rotate(3deg) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Remove the orange background on hover */
+.card:hover {
+    background: none; /* Ensures no background change on hover */
+    color: inherit; /* Retains the current text color */
+  }
+  
+  /* Adjust the text colors for better readability */
+  .inProgressText {
+    color: #444; /* Medium-dark grey for readability on yellow background */
+  }
+  
+  .emergencyText {
+    color: #eee; /* Lighter grey on red background */
+  }
+  
+  .justFoundText {
+    color: #dcdcdc; /* Light grey on green background */
+  }
+  

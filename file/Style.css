@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.app {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(17, 16, 16);
+  z-index: 2;
+}
+
+.navbar h1 {
+  color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+.video-container {
+  position: relative;
+  height: 100vh; /* Set height of video to 80% of viewport height */
+  width: 100%;
+  overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.overlay-text {
+  position: absolute;
+  top: 30%; /* Adjust to move it towards the top of the screen */
+  left: 20%;
+  right: 20%;
+  transform: translate(-50%, -20%); /* Horizontal centering and adjusted vertical position */
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  /* background-color: rgba(0, 0, 0, 0.3); Slig/ht translucent background to make text readable */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.overlay-text h1 {
+  margin: 0;
+  font-size: 3rem;
+  animation: fade-in 2s ease-in-out; /* Custom animation */
+}
+
+.overlay-text p {
+  margin: 10px 0 0;
+  font-size: 1.5rem;
+  animation: fade-in 2.5s ease-in-out; /* Custom animation */
+}
+
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(50px); /* Start below */
+  transition-property: opacity, transform;
+  transition-duration: 1s;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0); /* Ends at original position */
+}
+/* Card Section */
+.card-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  width: 22%;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 20px;
+  color: #6a6868;
+  /* color: #555; */
+}
+
+.card-sections{
+  display: flex;
+  justify-content: space-around;
+  padding: 60px; 
+  background-color: #f4f4f4;
+  min-height: 900px; 
+  flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+}
+
+.cards {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Padding around the content */
+  padding-top: 2px;
+  width: 20%; /* Adjust width */
+  height: 200px; /* Set fixed height */
+  text-align: left; /* Center the text horizontally */
+  margin: 10px; /* Space between cards */
+  
+  /* Flexbox properties for vertical alignment */
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items:baseline; /* Center content horizontally */
+}
+
+
+.para{
+  font-size: 25px;
+}
+.apps {
+  padding-top: 60px;
+  height: 900px;
+  
+}
+
+.lives-saved-section {
+  text-align: center; /* Center the text */
+  margin: 20px; /* Add margin for spacing */
+}
+
+.lives-saved-title {
+  background-color: #f0f0f0; /* Background color for title */
+  padding: 20px; /* Padding for aesthetics */
+  border-radius: 10px; /* Rounded corners */
+  /* z-index: -1; */
+}
+
+.lives-saved-counter {
+  background-color: #ffffff; /* Background color for count */
+  padding: 10px; /* Padding for aesthetics */
+  border-radius: 5px; /* Rounded corners */
+  /* margin-top: 10px; Space between title and count */
+  width: 80%; /* Set width smaller than the title */
+  /* z-index: 1000; */
+  margin: 0 auto; /* Center align count */
+  font-size: 2rem; /* Font size for the count */
+  color: #333; /* Text color */
+  /* color: #a80303;r */
+}
+.lives-saved-counter h1 {
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+/* Footer.css */
+.footer {
+  background-color: #000000; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center the text */
+}
+
+.footer-content {
+  margin-bottom: 20px; /* Space between content and bottom */
+}
+
+.footer-links {
+  margin: 10px 0; /* Margin for the links */
+}
+
+.footer-links a {
+  color: #fff; /* White text for links */
+  text-decoration: none; /* No underline */
+  margin: 0 15px; /* Space between links */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-contact {
+  margin: 15px 0; /* Margin for contact info */
+}
+
+.footer-bottom {
+  border-top: 1px solid #444; /* Top border for separation */
+  padding-top: 10px; /* Padding for top */
+  font-size: 0.9rem; /* Smaller text for copyright */
+}
+/* Footer.css */
+.social-icons {
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center the icons horizontally */
+  margin-top: 10px; /* Margin on top of icons */
+}
+
+.social-icon {
+  background-color: #f56a37; /* Icon background color */
+  background-color: #d9410a; /* Icon background color */
+  color: #fff; /* White text */
+  border-radius: 50%; /* Circular shape */
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin: 0 10px; /* Margin between icons */
+  text-decoration: none; /* No underline */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.social-icon:hover {
+  background-color: #f15521; /* Darker blue on hover */
+}
+.card:hover {
+  background-color: #f15521 !important;
+}
+
+.card:hover p {
+  color: white !important;
+}
+
+.card p:hover{
+
+  /* color: #f9f9f9; */
+  /* color: #ffffff; */
+}

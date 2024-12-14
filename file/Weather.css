@@ -1,0 +1,95 @@
+/* src/Weather.css */
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #1c1c1c; /* Black background */
+    color: #e65c00; /* Darker orange text color */
+    font-family: 'Roboto', sans-serif;
+}
+
+.weather-paper {
+    width: 85vw;
+    max-width: 600px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.85); /* Dark, nearly black background */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(230, 92, 0, 0.5); /* Darker orange shadow */
+    backdrop-filter: blur(6px);
+    color: #e69966; /* Deeper light orange for text */
+    text-align: center;
+    position: relative;
+}
+.ton{
+    background-color: #e65c00;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 6px #e65c00); /* Darker orange glow effect */
+}
+
+.weather-icon:hover {
+    transform: scale(1.1);
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1em;
+    margin-top: 20px;
+    color: #e69966; /* Deeper light orange for details */
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #e69966; /* Deeper light orange */
+    font-weight: 500;
+}
+
+.forecast-icon {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 4px #e65c00); /* Darker orange glow */
+}
+
+.city-input {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.weather-title {
+    margin-bottom: 20px;
+    color: #ff9933; /* Deep yellow-orange for title */
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.temperature {
+    font-size: 3em;
+    font-weight: 300;
+    color: #e65c00; /* Darker bold orange for temperature */
+}
+
+.condition-text {
+    font-size: 1.4em;
+    color: #e69966; /* Deeper light orange */
+}
